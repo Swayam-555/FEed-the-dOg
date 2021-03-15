@@ -36,12 +36,10 @@ function draw() {
   background(46,139,87);
   foodObj.display();
 
-  fedTime=database.ref('FeedTime');
-  fedTime.on("value",function(data){
-    lastFed=data.val();
-  });
+  //write code to read fedtime value from the database 
+  
  
-  //write code to show lastFed time here
+  //write code to display text lastFed time here
 
  
   drawSprites();

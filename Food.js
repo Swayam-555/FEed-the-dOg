@@ -1,8 +1,7 @@
 class Food {
     constructor(){
     this.foodStock=0;
-    //create last fed variable here
-    
+    this.lastFed;
     this.image=loadImage('Milk.png');
     }
 
@@ -10,8 +9,9 @@ class Food {
     this.foodStock=foodStock;
    }
 
-   //create a function to get fed time
-
+   getFedTime(lastFed){
+     this.lastFed=lastFed;
+   }
 
    deductFood(){
      if(this.foodStock>0){
