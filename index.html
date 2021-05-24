@@ -6,16 +6,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="p5.play.js"></script>
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<!-- TODO: Add SDKs for Firebase products that you want to use
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+<!-- TODO: Add SD+Ks for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
 <script>
   // Your web app's Firebase configuration
-
+  var firebaseConfig = {
+    apiKey: "AIzaSyCbflCeoGX3dwtu6kJdDhGxmvxPSXOHi3k",
+    authDomain: "feed-the-dog-e9c8a.firebaseapp.com",
+    databaseURL: "https://feed-the-dog-e9c8a-default-rtdb.firebaseio.com",
+    projectId: "feed-the-dog-e9c8a",
+    storageBucket: "feed-the-dog-e9c8a.appspot.com",
+    messagingSenderId: "559931998",
+    appId: "1:559931998:web:2d71dad1044415b6338acf"
+  };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
+ 
+
+
+ 
   
     <script src="Food.js"></script>
 

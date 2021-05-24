@@ -4,7 +4,7 @@ var addFood;
 var foodObj;
 
 //create feed and lastFed variable here
-
+var feed,lastFeed;
 
 function preload(){
 sadDog=loadImage("Dog.png");
@@ -16,7 +16,7 @@ function setup() {
   createCanvas(1000,400);
 
   foodObj = new Food();
-
+  
   foodStock=database.ref('Food');
   foodStock.on("value",readStock);
   
@@ -25,10 +25,15 @@ function setup() {
   dog.scale=0.15;
 
   //create feed the dog button here
+  //  feed = new food();
 
   addFood=createButton("Add Food");
   addFood.position(800,95);
   addFood.mousePressed(addFoods);
+
+  feedTheDog = createButton("Feed Dog");
+  feedTheDog.position(720,95);
+  feedTheDog.mousePressed(feedDog)
 
 }
 
@@ -56,11 +61,16 @@ function feedDog(){
   dog.addImage(happyDog);
 
   //write code here to update food stock and last fed time
-
+  foodS--;
+  database.ref('/').update({
+    Food:foodS
+})
 }
 
 //function to add food in stock
 function addFoods(){
+  dog.addImage(sadDog)
+  
   foodS++;
   database.ref('/').update({
     Food:foodS

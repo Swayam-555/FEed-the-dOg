@@ -33,7 +33,7 @@ class Food {
         for(var i=0;i<this.foodStock;i++){
           if(i%10==0){
             x=80;
-            y=y+50;
+            y=y+45;
           }
           image(this.image,x,y,50,50);
           x=x+30;
