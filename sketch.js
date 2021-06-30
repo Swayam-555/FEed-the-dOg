@@ -4,7 +4,7 @@ var addFood;
 var foodObj;
 
 //create feed and lastFed variable here
-var feed,lastFeed;
+// var feed,lastFeed;
 
 function preload(){
 sadDog=loadImage("Dog.png");
@@ -41,8 +41,14 @@ function draw() {
   background(46,139,87);
   foodObj.display();
 
-  //write code to read fedtime value from the database 
-  
+ // write code to read fedtime value from the database 
+  if (lastFeed >=12){
+    text("Last Feed : 7 PM",350,30)
+  }else if(lastFeed==0){
+    text("Last Feed : 12 AM",350,30)
+  }else if(lastFeed<=11){
+     text("Last Feed : 7 AM",350,30)
+  }
  
   //write code to display text lastFed time here
 
